@@ -1,0 +1,59 @@
+"""Make the disk/ring bigger relative to the void: increase OuterR + BoundR + enlarge the box
+mesh to contain it. Capture from a distant-above view (like #24) and an edge-on view to check
+the disk-to-void ratio. Geometry visible offline."""
+import unreal, math, os
+CENTER = unreal.Vector(-620000, 0, 230000)
+OUT = 'E:/projects/AlienSkies/Screenshots'
+eas = unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
+ues = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem)
+les = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
+ml = unreal.MathLibrary
+world = ues.get_editor_world()
+unreal.SystemLibrary.execute_console_command(world, 'Slate.bAllowThrottling 0')
+disk = None
+for a in eas.get_all_level_actors():
+    if a.get_actor_label() == 'BlackHole_RMDisk': disk = a
+dm = disk.get_component_by_class(unreal.StaticMeshComponent).get_material(0)
+OUTER = 150000.0; BOUND = 200000.0
+dm.set_scalar_parameter_value('OuterR', OUTER)
+dm.set_scalar_parameter_value('BoundR', BOUND)
+sc = (BOUND*2.1)/100.0
+disk.set_actor_scale3d(unreal.Vector(sc, sc, sc))
+les.save_current_level()
+print(f'OuterR={OUTER}, BoundR={BOUND}, box scale={sc:.0f}')
+def matched_pp():
+    pp = unreal.PostProcessSettings()
+    pp.set_editor_property('override_auto_exposure_method', True)
+    pp.set_editor_property('auto_exposure_method', unreal.AutoExposureMethod.AEM_MANUAL)
+    pp.set_editor_property('override_auto_exposure_bias', True)
+    pp.set_editor_property('auto_exposure_bias', 11.0)
+    pp.set_editor_property('override_auto_exposure_min_brightness', True)
+    pp.set_editor_property('auto_exposure_min_brightness', 1.0)
+    pp.set_editor_property('override_auto_exposure_max_brightness', True)
+    pp.set_editor_property('auto_exposure_max_brightness', 1.0)
+    return pp
+shots = [('wide_above', unreal.Vector(CENTER.x+230000, CENTER.y, CENTER.z+120000), 70.0),
+         ('wide_edge',  unreal.Vector(CENTER.x+230000, CENTER.y, CENTER.z+14000), 70.0)]
+for nm, cam, fov in shots:
+    rot = ml.find_look_at_rotation(cam, CENTER)
+    ues.set_level_viewport_camera_info(cam, rot)
+    path=f'{OUT}/{nm}.png'
+    if os.path.exists(path):
+        try: os.remove(path)
+        except Exception: pass
+    rt = unreal.TextureRenderTarget2D()
+    rt.set_editor_property('size_x', 1280); rt.set_editor_property('size_y', 720)
+    rt.set_editor_property('render_target_format', unreal.TextureRenderTargetFormat.RTF_RGBA8_SRGB)
+    ca = eas.spawn_actor_from_class(unreal.SceneCapture2D, cam, rot)
+    cap = ca.capture_component2d
+    cap.set_editor_property('texture_target', rt)
+    cap.set_editor_property('capture_source', unreal.SceneCaptureSource.SCS_FINAL_COLOR_LDR)
+    cap.set_editor_property('fov_angle', fov)
+    cap.set_editor_property('capture_every_frame', False)
+    cap.set_editor_property('capture_on_movement', False)
+    cap.set_editor_property('post_process_settings', matched_pp())
+    cap.capture_scene()
+    unreal.RenderingLibrary.export_render_target(world, rt, OUT, f'{nm}.png')
+    eas.destroy_actor(ca)
+    print(nm)
+print('Done.')

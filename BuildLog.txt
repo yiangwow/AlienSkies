@@ -1,0 +1,11 @@
+Attempting build at: 26/05/2026 23:26:40.04 
+ 
+Using bundled DotNet SDK version: 8.0.412 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Development Win64 -Project="E:\projects\AlienSkies\AlienSkies.uproject" -TargetType=Editor -Progress
+Log file: C:\Users\computer\AppData\Local\UnrealBuildTool\Log.txt
+Creating makefile for UnrealEditor (no existing makefile)
+Unable to instantiate module 'SwarmInterface': Could not find NetFxSDK install dir; this will prevent SwarmInterface from installing.  Install a version of .NET Framework SDK at 4.6.0 or higher.
+(referenced via Target -> Launch.Build.cs -> SessionServices.Build.cs -> Core.Build.cs -> Virtualization.Build.cs -> SourceControl.Build.cs -> RenderCore.Build.cs -> RHI.Build.cs -> D3D11RHI.Build.cs -> Engine.Build.cs -> AssetRegistry.Build.cs -> TargetPlatform.Build.cs -> TurnkeySupport.Build.cs -> LauncherServices.Build.cs -> TurnkeyIO.Build.cs -> ToolWidgets.Build.cs -> AppFramework.Build.cs -> SlateReflector.Build.cs -> PropertyEditor.Build.cs -> EditorConfig.Build.cs -> UnrealEd.Build.cs)
+
+Result: Failed (RulesError)
+Total execution time: 1.12 seconds

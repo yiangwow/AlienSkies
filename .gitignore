@@ -1,0 +1,39 @@
+# Unreal Engine generated directories
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+.idea/
+
+# Compiled binaries
+*.pdb
+*.dll
+*.exe
+*.lib
+*.exp
+
+# Packaging output
+Releases/
+Packages/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor temp
+*.orig
+*-backup
+
+# Python cache
+Scripts/__pycache__/
+**/__pycache__/
+*.pyc
+
+# Iteration screenshots (scratch verification captures, not source)
+Screenshots/
+
+# Blender generated meshes (regenerable from tools/blender/*.py)
+tools/blender/out/

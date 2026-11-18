@@ -1,0 +1,200 @@
+./build.bat: 5: C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat: not found
+./build.bat: 8: C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\Build.bat: not found
+'"C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat"' is not recognized as an internal or external command,
+operable program or batch file.
+Using bundled DotNet SDK version: 8.0.412 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Development Win64 -Project="E:\projects\AlienSkies\AlienSkies.uproject" -TargetType=Editor -Progress
+Log file: C:\Users\computer\AppData\Local\UnrealBuildTool\Log.txt
+Creating makefile for UnrealEditor (no existing makefile)
+UHT compiled-in object format Default
+@progress push 5%
+@progress 'Generating code...' 0%
+@progress 'Generating code...' 33%
+Parsing headers for UnrealEditor
+  Running Internal UnrealHeaderTool E:\projects\AlienSkies\AlienSkies.uproject E:\projects\AlienSkies\Intermediate\Build\Win64\UnrealEditor\Development\UnrealEditor.uhtmanifest -WarningsAsErrors -installed
+UHT processed UnrealEditor in 1.2996902 seconds (8 files written)
+@progress 'Generating code...' 67%
+@progress 'Generating code...' 100%
+@progress pop
+Building UnrealEditor...
+Using Visual Studio 2022 14.44.35227 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Determining max actions to execute in parallel (16 physical cores, 24 logical cores)
+  Executing up to 16 processes, one per physical core
+  Requested 1.5 GB memory per action, 15.57 GB available: limiting max parallel actions to 10
+Using Unreal Build Accelerator local executor to run 10 action(s)
+  Storage capacity 40Gb
+---- Starting trace: 260526_235232 ----
+UbaServer - Listening on 0.0.0.0:1345
+@progress 'Compiling C++ source code...' 0%
+@progress 'Compiling C++ source code...' 10%
+[1/10] Resource Default.rc2
+@progress 'Compiling C++ source code...' 20%
+@progress 'Compiling C++ source code...' 30%
+[2/10] Compile [x64] SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.cpp
+@progress 'Compiling C++ source code...' 40%
+[3/10] Compile [x64] PerModuleInline.gen.cpp
+@progress 'Compiling C++ source code...' 50%
+[4/10] Compile [x64] ScenePresetDataAsset.cpp
+[5/10] Compile [x64] SceneDirector.cpp
+@progress 'Compiling C++ source code...' 60%
+[6/10] Compile [x64] Module.AlienSkies.gen.cpp
+@progress 'Compiling C++ source code...' 70%
+@progress 'Compiling C++ source code...' 80%
+[7/10] Compile [x64] AlienCamera.cpp
+[8/10] Link [x64] UnrealEditor-AlienSkies.lib
+@progress 'Compiling C++ source code...' 90%
+[9/10] Link [x64] UnrealEditor-AlienSkies.dll
+@progress 'Compiling C++ source code...' 100%
+[10/10] WriteMetadata UnrealEditor.target [NoUba]
+
+Trace written to file C:/Users/computer/AppData/Local/UnrealBuildTool/Log.uba with size 6.7kb
+Total time in Unreal Build Accelerator local executor: 27.85 seconds
+
+Result: Succeeded
+Total execution time: 34.48 seconds
+'"C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat"' is not recognized as an internal or external command,
+operable program or batch file.
+Using bundled DotNet SDK version: 8.0.412 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Development Win64 -Project="E:\projects\AlienSkies\AlienSkies.uproject" -TargetType=Editor -Progress
+Log file: C:\Users\computer\AppData\Local\UnrealBuildTool\Log.txt
+@progress push 5%
+@progress 'Generating code...' 0%
+@progress 'Generating code...' 67%
+@progress 'Generating code...' 100%
+@progress pop
+Target is up to date
+
+Result: Succeeded
+Total execution time: 0.89 seconds
+'"C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat"' is not recognized as an internal or external command,
+operable program or batch file.
+Using bundled DotNet SDK version: 8.0.412 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Development Win64 -Project="E:\projects\AlienSkies\AlienSkies.uproject" -TargetType=Editor -Progress
+Log file: C:\Users\computer\AppData\Local\UnrealBuildTool\Log.txt
+Invalidating makefile for UnrealEditor (source file added)
+UHT compiled-in object format Default
+@progress push 5%
+@progress 'Generating code...' 0%
+@progress 'Generating code...' 67%
+@progress 'Generating code...' 100%
+@progress pop
+Building UnrealEditor...
+Using Visual Studio 2022 14.44.35227 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Determining max actions to execute in parallel (16 physical cores, 24 logical cores)
+  Executing up to 16 processes, one per physical core
+  Requested 1.5 GB memory per action, 18.11 GB available: limiting max parallel actions to 12
+Using Unreal Build Accelerator local executor to run 4 action(s)
+  Storage capacity 40Gb
+---- Starting trace: 260526_235544 ----
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+@progress 'Compiling C++ source code...' 0%
+@progress 'Compiling C++ source code...' 25%
+@progress 'Compiling C++ source code...' 50%
+[1/4] Compile [x64] AlienSkies.cpp
+[2/4] Link [x64] UnrealEditor-AlienSkies.lib
+@progress 'Compiling C++ source code...' 75%
+[3/4] Link [x64] UnrealEditor-AlienSkies.dll
+@progress 'Compiling C++ source code...' 100%
+[4/4] WriteMetadata UnrealEditor.target [NoUba]
+
+Trace written to file C:/Users/computer/AppData/Local/UnrealBuildTool/Log.uba with size 3.3kb
+Total time in Unreal Build Accelerator local executor: 1.18 seconds
+
+Result: Succeeded
+Total execution time: 4.95 seconds
+'"C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat"' is not recognized as an internal or external command,
+operable program or batch file.
+Using bundled DotNet SDK version: 8.0.412 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Development Win64 -Project="E:\projects\AlienSkies\AlienSkies.uproject" -TargetType=Editor -Progress
+Log file: C:\Users\computer\AppData\Local\UnrealBuildTool\Log.txt
+@progress push 5%
+@progress 'Generating code...' 0%
+@progress 'Generating code...' 67%
+@progress 'Generating code...' 100%
+@progress pop
+Unable to build while Live Coding is active. Exit the editor and game, or press Ctrl+Alt+F11 if iterating on code in the editor or game
+
+Result: Failed (OtherCompilationError)
+Total execution time: 1.75 seconds
+'"C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat"' is not recognized as an internal or external command,
+operable program or batch file.
+Using bundled DotNet SDK version: 8.0.412 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Development Win64 -Project="E:\projects\AlienSkies\AlienSkies.uproject" -TargetType=Editor -Progress
+Log file: C:\Users\computer\AppData\Local\UnrealBuildTool\Log.txt
+@progress push 5%
+@progress 'Generating code...' 0%
+@progress 'Generating code...' 67%
+@progress 'Generating code...' 100%
+@progress pop
+Unable to build while Live Coding is active. Exit the editor and game, or press Ctrl+Alt+F11 if iterating on code in the editor or game
+
+Result: Failed (OtherCompilationError)
+Total execution time: 0.95 seconds
+'"C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat"' is not recognized as an internal or external command,
+operable program or batch file.
+Using bundled DotNet SDK version: 8.0.412 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Development Win64 -Project="E:\projects\AlienSkies\AlienSkies.uproject" -TargetType=Editor -Progress
+Log file: C:\Users\computer\AppData\Local\UnrealBuildTool\Log.txt
+@progress push 5%
+@progress 'Generating code...' 0%
+@progress 'Generating code...' 67%
+@progress 'Generating code...' 100%
+@progress pop
+Unable to build while Live Coding is active. Exit the editor and game, or press Ctrl+Alt+F11 if iterating on code in the editor or game
+
+Result: Failed (OtherCompilationError)
+Total execution time: 0.91 seconds
+'"C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat"' is not recognized as an internal or external command,
+operable program or batch file.
+Using bundled DotNet SDK version: 8.0.412 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Development Win64 -Project="E:\projects\AlienSkies\AlienSkies.uproject" -TargetType=Editor -Progress
+Log file: C:\Users\computer\AppData\Local\UnrealBuildTool\Log.txt
+Creating makefile for UnrealEditor (no existing makefile)
+UHT compiled-in object format Default
+@progress push 5%
+@progress 'Generating code...' 0%
+@progress 'Generating code...' 33%
+Parsing headers for UnrealEditor
+  Running Internal UnrealHeaderTool E:\projects\AlienSkies\AlienSkies.uproject E:\projects\AlienSkies\Intermediate\Build\Win64\UnrealEditor\Development\UnrealEditor.uhtmanifest -WarningsAsErrors -installed
+UHT processed UnrealEditor in 1.2005373 seconds (8 files written)
+@progress 'Generating code...' 67%
+@progress 'Generating code...' 100%
+@progress pop
+Building UnrealEditor...
+Using Visual Studio 2022 14.44.35227 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Determining max actions to execute in parallel (16 physical cores, 24 logical cores)
+  Executing up to 16 processes, one per physical core
+  Requested 1.5 GB memory per action, 15.57 GB available: limiting max parallel actions to 10
+Using Unreal Build Accelerator local executor to run 11 action(s)
+  Storage capacity 40Gb
+---- Starting trace: 260528_222619 ----
+UbaServer - Listening on 0.0.0.0:1345
+@progress 'Compiling C++ source code...' 0%
+@progress 'Compiling C++ source code...' 9%
+[1/11] Resource Default.rc2
+@progress 'Compiling C++ source code...' 18%
+@progress 'Compiling C++ source code...' 27%
+[2/11] Compile [x64] SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.cpp
+@progress 'Compiling C++ source code...' 36%
+[3/11] Compile [x64] AlienSkies.cpp
+@progress 'Compiling C++ source code...' 45%
+[4/11] Compile [x64] PerModuleInline.gen.cpp
+@progress 'Compiling C++ source code...' 55%
+[5/11] Compile [x64] ScenePresetDataAsset.cpp
+@progress 'Compiling C++ source code...' 64%
+[6/11] Compile [x64] SceneDirector.cpp
+@progress 'Compiling C++ source code...' 73%
+[7/11] Compile [x64] Module.AlienSkies.gen.cpp
+@progress 'Compiling C++ source code...' 82%
+[8/11] Compile [x64] AlienCamera.cpp
+[9/11] Link [x64] UnrealEditor-AlienSkies.lib
+[10/11] Link [x64] UnrealEditor-AlienSkies.dll
+@progress 'Compiling C++ source code...' 91%
+@progress 'Compiling C++ source code...' 100%
+[11/11] WriteMetadata UnrealEditor.target [NoUba]
+
+Trace written to file C:/Users/computer/AppData/Local/UnrealBuildTool/Log.uba with size 7.1kb
+Total time in Unreal Build Accelerator local executor: 30.12 seconds
+
+Result: Succeeded
+Total execution time: 46.16 seconds

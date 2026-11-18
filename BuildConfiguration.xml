@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration xmlns="http://www.epicgames.com/BuildConfiguration">
+  <BuildConfiguration>
+    <bAllowDistcc>false</bAllowDistcc>
+    <bAllowFASTBuild>false</bAllowFASTBuild>
+    <bAllowSWATCH>false</bAllowSWATCH>
+    <bAllowXGE>false</bAllowXGE>
+  </BuildConfiguration>
+</Configuration>
